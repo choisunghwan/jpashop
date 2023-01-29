@@ -6,11 +6,14 @@
 
 #### 도메인 모델과 테이블 설계
 
-![domain_model_table.jpg](..%2Fdomain_model_table.jpg)
+![domain_model_table](https://user-images.githubusercontent.com/33335762/215321955-1860f61e-6afa-4798-bfb9-1aee7cf3902a.jpg)
+
 
 #### 회원 엔티티 분석
-![member_entity.jpg](..%2Fmember_entity.jpg)
+
+![member_entity](https://user-images.githubusercontent.com/33335762/215321957-5b45abd9-2390-4584-ace3-997f21d1565a.jpg)
+
 
 #### 회원 테이블 분석
-![member_table.jpg](..%2Fmember_table.jpg)
 
+![member_table](https://user-images.githubusercontent.com/33335762/215321959-429a9927-1987-411f-b7aa-251f2e14db63.jpg)
