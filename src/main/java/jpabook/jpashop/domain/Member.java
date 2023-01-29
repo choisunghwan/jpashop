@@ -25,4 +25,5 @@ public class Member {
     private List<Order> orders = new ArrayList<>(); // 주문 리스트
 
 
+
 }
