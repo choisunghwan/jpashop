@@ -1,10 +1,13 @@
 package jpabook.jpashop.domain.item;
 
 
+import jpabook.jpashop.domain.Category;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 // 추상클래스로 만든 이유? => 구현체를 가지게 할 것이기 때문에 abstract 를 붙였음.
 @Entity
@@ -22,5 +25,8 @@ public abstract class Item {
     private int price; // 아이템 가격
     private int stockQuantity; // 재고량
 
+
+    @ManyToMany(mappedBy = "items")
+    private List<Category> categories = new ArrayList<>();
 
 }
