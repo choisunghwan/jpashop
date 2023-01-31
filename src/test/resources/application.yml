@@ -1,0 +1,23 @@
+spring:
+#  datasource:
+#    url: jdbc:h2:mem:test
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
+#
+## ddl-auto:create => 애플리케이션 실행시 내가 가지고 있는 데이터를 다 지우고, 다시 생성 한다.
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: create-drop
+#    properties:
+##      show_sql 은 System.out에 로그 출력.(운영환경에서 쓰지 않음)
+##      show_sql: true
+#      format_sql: true
+
+# 로그 레벨을 설정 (운영환경에서는 system.out 이 아닌 log를 통해서 찍음)
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
+

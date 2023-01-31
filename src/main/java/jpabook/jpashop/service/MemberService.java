@@ -16,7 +16,7 @@ import java.util.List;
 @RequiredArgsConstructor // final 이 있는 것의 생성자 생성해줌.
 public class MemberService {
 
-//    @Autowired //autowired: 스프링 빈에 등록된 memberrepository를 injection(주입) 해준다.
+    //    @Autowired //autowired: 스프링 빈에 등록된 memberrepository를 injection(주입) 해준다.
     private final MemberRepository memberRepository;
 
 
@@ -24,27 +24,31 @@ public class MemberService {
      * 회원 가입 (등록)
      */
     @Transactional
-    public Long join(Member member){
-        validateDuplicateMember(member); // 중복 회원 검증
+    public Long join(Member member) {
+
+        validateDuplicateMember(member); //중복 회원 검증
         memberRepository.save(member);
         return member.getId();
     }
 
     private void validateDuplicateMember(Member member) {
         List<Member> findMembers = memberRepository.findByName(member.getName());
-        if(!findMembers.isEmpty()){
+        if (!findMembers.isEmpty()) {
             throw new IllegalStateException("이미 존재하는 회원입니다.");
         }
     }
 
     // 회원 전체 조회
-    public List<Member> findMembers(){
+    public List<Member> findMembers() {
+
         return memberRepository.findAll();
     }
 
     // 한 건 조회
-    public Member findOne(Long memberId){
+    public Member findOne(Long memberId) {
+
         return memberRepository.findOne(memberId);
     }
+
 
 }
